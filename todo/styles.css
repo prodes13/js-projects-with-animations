@@ -123,11 +123,25 @@ select {
 }
 
 select {
+    padding: 1rem;
     color: #ff6f47;
     width: 10rem;
     cursor: pointer;
 }
 
 .select::after {
-    
+    content: "\25BC";
+    position: absolute;
+    background: #ff6747;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    /* so we can click through it */
+    transition: all .3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: #ff6747;
 }
